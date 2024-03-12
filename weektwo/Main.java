@@ -1,12 +1,21 @@
 package weektwo;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        String product = "Rice";
-        int qty = 20;
-        float price = 5.0f;
-        float miles = 10f;
+        Scanner input = new Scanner(System.in);
+        System.out.println("What Item would you like? ");
+        String product = input.nextLine();
+
+        System.out.println("How many items? ");
+        int qty = input.nextInt();
+
+        System.out.println("What is the price? ");
+        float price = input.nextFloat();
+
+        System.out.println("How many miles? ");
+        float miles = input.nextFloat();
+
         int fee = 0;
 
         if(miles <= 4){
@@ -27,7 +36,9 @@ public class Main {
 
         double total = (price * qty) + fee;
 
-        System.out.println("Your total cost is " + total);
+        System.out.println("How many miles? ");
+
+        System.out.println("Your total cost is for " +qty+ " " + product + " is " + "$"+ total);
 
     }
 }
